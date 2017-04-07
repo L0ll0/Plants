@@ -3,14 +3,17 @@
  * will actuate the solenoid valve
  */
 #include <VirtualWire.h>
-#define P1 A0
-#define P2 A1
-#define P3 A2
+const int n=3;  //Number of plants involved(it depends on the number of analog input ports)
+int Plants[n];
+
 //These are all the plants that will be included in the project
 
 void setup() {
+  for(int i=0; i<n; i++)
+  {
+    Plants[i]= i;
+  }
   
-
 }
 
 void loop() {
